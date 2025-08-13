@@ -1,8 +1,7 @@
-import React from "react";
+import { Counter, Header } from "@ingenico-challenge/ui";
 import { createRoot } from "react-dom/client";
 import "./style.css";
 import typescriptLogo from "/typescript.svg";
-import { Header, Counter } from "@ingenico-challenge/ui";
 
 const App = () => (
     <div>
