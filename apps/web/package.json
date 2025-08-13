@@ -11,8 +11,8 @@
     },
     "dependencies": {
         "@ingenico-challenge/ui": "workspace:*",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "react": "^19.0.1",
+        "react-dom": "^19.0.2"
     },
     "devDependencies": {
         "@ingenico-challenge/eslint-config": "workspace:*",

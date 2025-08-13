@@ -1,32 +1,37 @@
 {
-  "name": "@ingenico-challenge/ui",
-  "version": "0.0.0",
-  "exports": {
-    ".": "./index.ts",
-    "./counter": "./components/counter.ts",
-    "./header": "./components/header.ts",
-    "./setup-counter": "./utils/counter.ts"
-  },
-  "license": "MIT",
-  "scripts": {
-    "lint": "eslint \"**/*.ts\"",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@ingenico-challenge/eslint-config": "workspace:*",
-    "@ingenico-challenge/typescript-config": "workspace:*",
-    "@storybook/react-vite": "^9.1.2",
-    "@types/node": "^24.2.1",
-    "@types/react": "^19.0.1",
-    "@types/react-dom": "^19.0.2",
-    "eslint": "^8.57.0",
-    "eslint-plugin-storybook": "^9.1.2",
-    "storybook": "^9.1.2",
-    "typescript": "5.5.4"
-  }
+    "name": "@ingenico-challenge/ui",
+    "version": "0.0.0",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.ts"
+    },
+    "license": "MIT",
+    "scripts": {
+        "lint": "eslint \"**/*.ts\"",
+        "storybook": "storybook dev -p 6006",
+        "build-storybook": "storybook build"
+    },
+    "dependencies": {
+        "clsx": "^2.1.1",
+        "react": "^19.0.1",
+        "react-dom": "^19.0.2",
+        "tailwind-merge": "^3.3.1"
+    },
+    "devDependencies": {
+        "@ingenico-challenge/eslint-config": "workspace:*",
+        "@ingenico-challenge/typescript-config": "workspace:*",
+        "@storybook/react-vite": "^9.1.2",
+        "@tailwindcss/vite": "^4.1.11",
+        "@types/node": "^24.2.1",
+        "@types/react": "^19.0.1",
+        "@types/react-dom": "^19.0.2",
+        "@vitejs/plugin-react": "^3.1.0",
+        "eslint": "^8.57.0",
+        "eslint-plugin-storybook": "^9.1.2",
+        "storybook": "^9.1.2",
+        "tailwindcss": "^4.1.11",
+        "typescript": "5.5.4",
+        "vite": "^5.1.4",
+        "vite-tsconfig-paths": "^5.1.4"
+    }
 }

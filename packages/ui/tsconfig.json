@@ -1,5 +1,5 @@
 {
     "extends": "@ingenico-challenge/typescript-config/react-library.json",
-    "include": ["."],
-    "exclude": ["node_modules"]
+    "include": ["src/**/*", ".storybook/*", "eslint.config.ts", "vite.config.ts"],
+    "exclude": ["dist"]
 }
