@@ -8,7 +8,7 @@ export type InputBaseProps = Omit<ComponentProps<"div">, "prefix" | "suffix"> & 
 };
 
 const inputContainerVariants = cva(
-    "h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium",
+    "input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium",
     {
         variants: {
             variant: {

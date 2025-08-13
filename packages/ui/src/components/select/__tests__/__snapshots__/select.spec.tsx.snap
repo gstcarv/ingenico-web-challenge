@@ -2,11 +2,12 @@
 
 exports[`Select > applies correct base classes to container 1`] = `
 <div
-  class="h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
+  class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
 >
   <select
-    class="select__input w-full h-full appearance-none bg-transparent px-4"
+    class="select__input w-full h-full appearance-none bg-transparent focus-visible:ring-2 focus-visible:ring-offset focus-visible:ring-brand-primary rounded-lg outline-none px-4"
     data-testid="select"
+    tabindex="0"
   >
     <option
       value="option1"
@@ -36,11 +37,12 @@ exports[`Select > applies correct base classes to container 1`] = `
 
 exports[`Select > applies correct classes to select element 1`] = `
 <div
-  class="h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
+  class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
 >
   <select
-    class="select__input w-full h-full appearance-none bg-transparent px-4"
+    class="select__input w-full h-full appearance-none bg-transparent focus-visible:ring-2 focus-visible:ring-offset focus-visible:ring-brand-primary rounded-lg outline-none px-4"
     data-testid="select"
+    tabindex="0"
   >
     <option
       value="option1"
@@ -70,7 +72,7 @@ exports[`Select > applies correct classes to select element 1`] = `
 
 exports[`Select > applies correct padding when prefix is present 1`] = `
 <div
-  class="h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
+  class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
 >
   <div
     class="absolute left-4 top-1/2 transform -translate-y-1/2 pointer-events-none text-neutral-500"
@@ -78,8 +80,9 @@ exports[`Select > applies correct padding when prefix is present 1`] = `
     R$
   </div>
   <select
-    class="select__input w-full h-full appearance-none bg-transparent pl-12"
+    class="select__input w-full h-full appearance-none bg-transparent focus-visible:ring-2 focus-visible:ring-offset focus-visible:ring-brand-primary rounded-lg outline-none pl-12"
     data-testid="select"
+    tabindex="0"
   >
     <option
       value="option1"
@@ -109,11 +112,12 @@ exports[`Select > applies correct padding when prefix is present 1`] = `
 
 exports[`Select > applies custom className 1`] = `
 <div
-  class="h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium custom-class"
+  class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium custom-class"
 >
   <select
-    class="select__input w-full h-full appearance-none bg-transparent px-4"
+    class="select__input w-full h-full appearance-none bg-transparent focus-visible:ring-2 focus-visible:ring-offset focus-visible:ring-brand-primary rounded-lg outline-none px-4"
     data-testid="select"
+    tabindex="0"
   >
     <option
       value="option1"
@@ -143,11 +147,12 @@ exports[`Select > applies custom className 1`] = `
 
 exports[`Select > applies default padding when no prefix is present 1`] = `
 <div
-  class="h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
+  class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
 >
   <select
-    class="select__input w-full h-full appearance-none bg-transparent px-4"
+    class="select__input w-full h-full appearance-none bg-transparent focus-visible:ring-2 focus-visible:ring-offset focus-visible:ring-brand-primary rounded-lg outline-none px-4"
     data-testid="select"
+    tabindex="0"
   >
     <option
       value="option1"
