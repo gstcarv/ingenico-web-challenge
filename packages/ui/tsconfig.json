@@ -1,5 +1,8 @@
 {
     "extends": "@ingenico-challenge/typescript-config/react-library.json",
+    "compilerOptions": {
+        "types": ["vitest/globals"]
+    },
     "include": ["src/**/*", ".storybook/*", "eslint.config.ts", "vite.config.ts"],
     "exclude": ["dist"]
 }
