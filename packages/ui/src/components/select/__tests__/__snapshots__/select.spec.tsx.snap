@@ -1,0 +1,176 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Select > applies correct base classes to container 1`] = `
+<div
+  class="h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
+>
+  <select
+    class="select__input w-full h-full appearance-none bg-transparent px-4"
+    data-testid="select"
+  >
+    <option
+      value="option1"
+    >
+      Option 1
+    </option>
+  </select>
+  <svg
+    aria-hidden="true"
+    class="lucide lucide-chevron-down select__input-icon absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-neutral-500"
+    fill="none"
+    height="20"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    width="20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="m6 9 6 6 6-6"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Select > applies correct classes to select element 1`] = `
+<div
+  class="h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
+>
+  <select
+    class="select__input w-full h-full appearance-none bg-transparent px-4"
+    data-testid="select"
+  >
+    <option
+      value="option1"
+    >
+      Option 1
+    </option>
+  </select>
+  <svg
+    aria-hidden="true"
+    class="lucide lucide-chevron-down select__input-icon absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-neutral-500"
+    fill="none"
+    height="20"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    width="20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="m6 9 6 6 6-6"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Select > applies correct padding when prefix is present 1`] = `
+<div
+  class="h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
+>
+  <div
+    class="absolute left-4 top-1/2 transform -translate-y-1/2 pointer-events-none text-neutral-500"
+  >
+    R$
+  </div>
+  <select
+    class="select__input w-full h-full appearance-none bg-transparent pl-12"
+    data-testid="select"
+  >
+    <option
+      value="option1"
+    >
+      Option 1
+    </option>
+  </select>
+  <svg
+    aria-hidden="true"
+    class="lucide lucide-chevron-down select__input-icon absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-neutral-500"
+    fill="none"
+    height="20"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    width="20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="m6 9 6 6 6-6"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Select > applies custom className 1`] = `
+<div
+  class="h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium custom-class"
+>
+  <select
+    class="select__input w-full h-full appearance-none bg-transparent px-4"
+    data-testid="select"
+  >
+    <option
+      value="option1"
+    >
+      Option 1
+    </option>
+  </select>
+  <svg
+    aria-hidden="true"
+    class="lucide lucide-chevron-down select__input-icon absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-neutral-500"
+    fill="none"
+    height="20"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    width="20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="m6 9 6 6 6-6"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Select > applies default padding when no prefix is present 1`] = `
+<div
+  class="h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
+>
+  <select
+    class="select__input w-full h-full appearance-none bg-transparent px-4"
+    data-testid="select"
+  >
+    <option
+      value="option1"
+    >
+      Option 1
+    </option>
+  </select>
+  <svg
+    aria-hidden="true"
+    class="lucide lucide-chevron-down select__input-icon absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-neutral-500"
+    fill="none"
+    height="20"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    width="20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="m6 9 6 6 6-6"
+    />
+  </svg>
+</div>
+`;
