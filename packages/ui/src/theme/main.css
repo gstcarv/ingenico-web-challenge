@@ -1,0 +1,131 @@
+@layer base {
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+    }
+}
+
+@theme {
+    --color-*: initial;
+
+    --color-brand-50: #e6f8fc;
+    --color-brand-100: #c0eef7;
+    --color-brand-200: #99e4f2;
+    --color-brand-300: #66d7ec;
+    --color-brand-400: #33cbe6;
+    --color-brand-500: #19b6dd;
+    --color-brand-600: #1490b0;
+    --color-brand-700: #0f6b83;
+    --color-brand-800: #0a4656;
+    --color-brand-900: #062229;
+
+    --color-neutral-0: #ffffff;
+    --color-neutral-50: #f1eefc;
+    --color-neutral-100: #e8e6f4;
+    --color-neutral-200: #d5d3e4;
+    --color-neutral-300: #bfc0ce;
+    --color-neutral-400: #a8aab8;
+    --color-neutral-500: #9294a2;
+    --color-neutral-600: #7b7e8d;
+    --color-neutral-700: #666f75;
+    --color-neutral-800: #444b50;
+    --color-neutral-900: #222629;
+    --color-neutral-950: #0c1e58;
+
+    --color-error-50: #fff2f2;
+    --color-error-100: #fee5e5;
+    --color-error-200: #fccccc;
+    --color-error-300: #f99d9d;
+    --color-error-400: #f26868;
+    --color-error-500: #e53e3e;
+    --color-error-600: #c53030;
+    --color-error-700: #9b2c2c;
+    --color-error-800: #742a2a;
+    --color-error-900: #611414;
+
+    --color-warning-50: #fffaeb;
+    --color-warning-100: #fef3c7;
+    --color-warning-200: #fde68a;
+    --color-warning-300: #fcd34d;
+    --color-warning-400: #fbbf24;
+    --color-warning-500: #f59e0b;
+    --color-warning-600: #d97706;
+    --color-warning-700: #b45309;
+    --color-warning-800: #92400e;
+    --color-warning-900: #78350f;
+
+    --color-success-50: #ecfdf5;
+    --color-success-100: #d1fae5;
+    --color-success-200: #a7f3d0;
+    --color-success-300: #6ee7b7;
+    --color-success-400: #34d399;
+    --color-success-500: #10b981;
+    --color-success-600: #059669;
+    --color-success-700: #047857;
+    --color-success-800: #065f46;
+    --color-success-900: #064e3b;
+
+    --color-brand-primary: #19b6dd;
+    --color-default-font: #0c1e58;
+    --color-subtext-color: #666f75;
+    --color-neutral-border: #d5d3e4;
+    --color-white: #ffffff;
+    --color-default-background: #f1eefc;
+
+    --text-caption: 12px;
+    --text-caption--font-weight: 400;
+    --text-caption--letter-spacing: 0em;
+    --text-caption--line-height: 16px;
+    --text-caption-bold: 12px;
+    --text-caption-bold--font-weight: 500;
+    --text-caption-bold--letter-spacing: 0em;
+    --text-caption-bold--line-height: 16px;
+    --text-body: 14px;
+    --text-body--font-weight: 400;
+    --text-body--letter-spacing: 0em;
+    --text-body--line-height: 20px;
+    --text-body-bold: 14px;
+    --text-body-bold--font-weight: 500;
+    --text-body-bold--letter-spacing: 0em;
+    --text-body-bold--line-height: 20px;
+    --text-heading-3: 16px;
+    --text-heading-3--font-weight: 600;
+    --text-heading-3--letter-spacing: 0em;
+    --text-heading-3--line-height: 20px;
+    --text-heading-2: 20px;
+    --text-heading-2--font-weight: 600;
+    --text-heading-2--letter-spacing: 0em;
+    --text-heading-2--line-height: 24px;
+    --text-heading-1: 30px;
+    --text-heading-1--font-weight: 500;
+    --text-heading-1--letter-spacing: 0em;
+    --text-heading-1--line-height: 36px;
+    --text-monospace-body: 14px;
+    --text-monospace-body--font-weight: 400;
+    --text-monospace-body--letter-spacing: 0em;
+    --text-monospace-body--line-height: 20px;
+
+    --font-caption: Inter;
+    --font-caption-bold: Inter;
+    --font-body: Inter;
+    --font-body-bold: Inter;
+    --font-heading-3: Inter;
+    --font-heading-2: Inter;
+    --font-heading-1: Inter;
+    --font-monospace-body: monospace;
+
+    --shadow-sm: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    --shadow-default: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0px 4px 16px -2px rgba(0, 0, 0, 0.08), 0px 2px 4px -1px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0px 12px 32px -4px rgba(0, 0, 0, 0.08), 0px 4px 8px -2px rgba(0, 0, 0, 0.08);
+    --shadow-overlay: 0px 12px 32px -4px rgba(0, 0, 0, 0.08), 0px 4px 8px -2px rgba(0, 0, 0, 0.08);
+
+    --radius-sm: 2px;
+    --radius-md: 4px;
+    --radius-DEFAULT: 4px;
+    --radius-lg: 8px;
+    --radius-full: 9999px;
+
+    --default-font-family: "Noto Sans", sans-serif;
+}
