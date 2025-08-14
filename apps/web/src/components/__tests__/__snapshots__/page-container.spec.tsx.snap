@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PageContainer > should match snapshot 1`] = `
+<div
+  class="bg-brand-50 min-w-screen min-h-screen flex items-center justify-center flex-col gap-16 p-4"
+>
+  <div
+    data-testid="app-logo"
+  >
+    App Logo
+  </div>
+  <div>
+    Test Content
+  </div>
+</div>
+`;
+
+exports[`PageContainer > should match snapshot with empty children 1`] = `
+<div
+  class="bg-brand-50 min-w-screen min-h-screen flex items-center justify-center flex-col gap-16 p-4"
+>
+  <div
+    data-testid="app-logo"
+  >
+    App Logo
+  </div>
+  <div />
+</div>
+`;

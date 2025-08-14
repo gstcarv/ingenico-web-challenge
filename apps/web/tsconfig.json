@@ -3,6 +3,6 @@
     "include": ["src"],
     "compilerOptions": {
         "jsx": "react-jsx",
-        "types": ["node"]
+        "types": ["node", "vitest/globals"]
     }
 }
