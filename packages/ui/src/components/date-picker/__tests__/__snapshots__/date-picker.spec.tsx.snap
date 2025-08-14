@@ -442,29 +442,29 @@ exports[`DatePicker > applies custom className 1`] = `
                   </button>
                 </td>
                 <td
-                  class="rdp-day rdp-today"
+                  class="rdp-day"
                   data-day="2025-08-13"
-                  data-today="true"
                   role="gridcell"
                 >
                   <button
-                    aria-label="Today, Wednesday, August 13th, 2025"
+                    aria-label="Wednesday, August 13th, 2025"
                     class="rdp-day_button"
-                    tabindex="0"
+                    tabindex="-1"
                     type="button"
                   >
                     13
                   </button>
                 </td>
                 <td
-                  class="rdp-day"
+                  class="rdp-day rdp-today"
                   data-day="2025-08-14"
+                  data-today="true"
                   role="gridcell"
                 >
                   <button
-                    aria-label="Thursday, August 14th, 2025"
+                    aria-label="Today, Thursday, August 14th, 2025"
                     class="rdp-day_button"
-                    tabindex="-1"
+                    tabindex="0"
                     type="button"
                   >
                     14

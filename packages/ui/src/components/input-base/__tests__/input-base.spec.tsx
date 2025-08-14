@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { InputBase } from "../input-base";
+import { Field } from "../../field";
 
 describe("InputBase", () => {
     it("renders with children", () => {
@@ -75,5 +76,32 @@ describe("InputBase", () => {
         );
 
         expect(screen.getByPlaceholderText("Simple input")).toBeInTheDocument();
+    });
+
+    it("applies error styling when used within Field with validation error", () => {
+        render(
+            <Field>
+                <InputBase data-testid="input-base">
+                    <input placeholder="Test input" />
+                </InputBase>
+                <Field.Validation>Error message</Field.Validation>
+            </Field>,
+        );
+
+        const inputBase = screen.getByTestId("input-base");
+        expect(inputBase).toHaveClass("border-error-500");
+    });
+
+    it("does not apply error styling when used within Field without validation error", () => {
+        render(
+            <Field>
+                <InputBase data-testid="input-base">
+                    <input placeholder="Test input" />
+                </InputBase>
+            </Field>,
+        );
+
+        const inputBase = screen.getByTestId("input-base");
+        expect(inputBase).not.toHaveClass("border-error-500");
     });
 });

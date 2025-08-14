@@ -10,7 +10,12 @@ export const CurrencyConverterForm = () => {
     return (
         <form onSubmit={onSubmit} className="flex flex-col gap-6">
             <div className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-6">
-                <CurrencySelect label="From" name="fromCurrency" control={form.control} />
+                <CurrencySelect
+                    label="From"
+                    name="fromCurrency"
+                    control={form.control}
+                    error={errors.fromCurrency?.message}
+                />
 
                 <Button
                     variant="outline"
@@ -23,7 +28,12 @@ export const CurrencyConverterForm = () => {
                     <ArrowUpDown className="lg:hidden" />
                 </Button>
 
-                <CurrencySelect label="To" name="toCurrency" control={form.control} />
+                <CurrencySelect
+                    label="To"
+                    name="toCurrency"
+                    control={form.control}
+                    error={errors.toCurrency?.message}
+                />
             </div>
 
             <Field>
@@ -57,7 +67,7 @@ export const CurrencyConverterForm = () => {
                         />
                     )}
                 />
-                {errors.amount && <span className="text-red-500 text-sm mt-1">{errors.amount.message}</span>}
+                {errors.amount && <Field.Validation>{errors.amount.message}</Field.Validation>}
             </Field>
 
             <div className="pt-2">

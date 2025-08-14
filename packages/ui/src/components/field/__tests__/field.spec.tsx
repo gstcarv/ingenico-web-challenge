@@ -1,6 +1,16 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { Field } from "../field";
+import { Field, useFieldError } from "../field";
+
+// Test component to verify context
+const TestInputBase = () => {
+    const hasError = useFieldError();
+    return (
+        <div data-testid="input-base" data-error={hasError.toString()}>
+            Input
+        </div>
+    );
+};
 
 describe("Field", () => {
     it("renders children correctly", () => {
@@ -43,6 +53,29 @@ describe("Field", () => {
 
         expect(screen.getByTestId("field-container")).toBeInTheDocument();
         expect(screen.getByLabelText("test field")).toBeInTheDocument();
+    });
+
+    it("provides error context when Field.Validation is present", () => {
+        render(
+            <Field>
+                <TestInputBase />
+                <Field.Validation>Error message</Field.Validation>
+            </Field>,
+        );
+
+        const inputBase = screen.getByTestId("input-base");
+        expect(inputBase).toHaveAttribute("data-error", "true");
+    });
+
+    it("provides no error context when Field.Validation is not present", () => {
+        render(
+            <Field>
+                <TestInputBase />
+            </Field>,
+        );
+
+        const inputBase = screen.getByTestId("input-base");
+        expect(inputBase).toHaveAttribute("data-error", "false");
     });
 });
 

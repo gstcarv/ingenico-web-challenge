@@ -9,13 +9,14 @@ interface CurrencySelectProps {
     name: keyof CurrencyFormData;
     control: Control<CurrencyFormData>;
     className?: string;
+    error?: string;
 }
 
 function getFlag(code: string) {
     return `https://raw.githubusercontent.com/Lissy93/currency-flags/refs/heads/master/assets/flags_svg/${code.toLowerCase()}.svg`;
 }
 
-export const CurrencySelect = ({ label, name, control, className }: CurrencySelectProps) => {
+export const CurrencySelect = ({ label, name, control, className, error }: CurrencySelectProps) => {
     const availableCurrencies = useQuery(getAvailableCurrenciesQuery());
 
     const currencies = availableCurrencies.data?.data || {};
@@ -57,6 +58,7 @@ export const CurrencySelect = ({ label, name, control, className }: CurrencySele
                     );
                 }}
             />
+            {error && <Field.Validation>{error}</Field.Validation>}
         </Field>
     );
 };
