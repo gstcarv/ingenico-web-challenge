@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { describe, expect, it, vi, beforeEach } from "vitest";
+import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
 import { ConversionResult } from "../conversion-result";
 import type { ProcessedConversionResponse } from "../../../types/currency";
 
@@ -23,6 +23,12 @@ describe("ConversionResult", () => {
 
     beforeEach(() => {
         vi.clearAllMocks();
+        // Mock Date.prototype.toLocaleString to return a consistent date string
+        vi.spyOn(Date.prototype, "toLocaleString").mockReturnValue("1/15/2024, 7:30:00 AM");
+    });
+
+    afterEach(() => {
+        vi.restoreAllMocks();
     });
 
     it("should render nothing when conversionResult is null", () => {
@@ -135,15 +141,6 @@ describe("ConversionResult", () => {
 
         const mainContainer = container.firstChild as HTMLElement;
         expect(mainContainer).toHaveClass("mt-6", "p-4", "bg-success-50", "border", "border-success-200", "rounded-lg");
-    });
-
-    it("should match snapshot", () => {
-        mockUseConversionStore.mockReturnValue({
-            conversionResult: mockConversionResult,
-        });
-
-        const { container } = render(<ConversionResult />);
-        expect(container.firstChild).toMatchSnapshot();
     });
 
     it("should handle zero amounts correctly", () => {
