@@ -43,7 +43,10 @@ export const useCurrencyForm = () => {
 
     const handleRetry = useCallback(async () => {
         const formData = form.getValues();
-        if (form.formState.isValid) {
+
+        const isFormValid = Object.keys(form.formState.errors).length === 0;
+
+        if (isFormValid) {
             return conversionMutation.mutateAsync(formData);
         }
 
