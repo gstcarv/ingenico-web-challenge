@@ -27,3 +27,14 @@ export interface HistoricalConversionResponse {
         last_updated_at: string;
     };
 }
+
+// Interface para resposta processada da conversão
+export interface ProcessedConversionResponse {
+    originalAmount: number;
+    convertedAmount: number;
+    fromCurrency: string;
+    toCurrency: string;
+    exchangeRate: number;
+    date: string;
+    lastUpdatedAt: string;
+}

@@ -1,23 +1,11 @@
 import { Button, CurrencyInput, DatePicker, Field } from "@ingenico-challenge/ui";
 import { ArrowLeftRight, ArrowUpDown, Calendar } from "lucide-react";
 import { Controller } from "react-hook-form";
-import { useEffect } from "react";
 import { CurrencySelect } from "./currency-select";
 import { useCurrencyForm } from "../../hooks/use-currency-form";
-import type { HistoricalConversionResponse } from "../../types/currency";
 
-type CurrencyConverterFormProps = {
-    onConversionResult?: (result: HistoricalConversionResponse) => void;
-};
-
-export const CurrencyConverterForm = ({ onConversionResult }: CurrencyConverterFormProps) => {
-    const { form, onSubmit, handleSwapCurrencies, isSubmitting, errors, conversionResult } = useCurrencyForm();
-
-    useEffect(() => {
-        if (conversionResult && onConversionResult) {
-            onConversionResult(conversionResult);
-        }
-    }, [conversionResult, onConversionResult]);
+export const CurrencyConverterForm = () => {
+    const { form, onSubmit, handleSwapCurrencies, isSubmitting, errors } = useCurrencyForm();
 
     return (
         <form onSubmit={onSubmit} className="flex flex-col gap-6">
