@@ -1,0 +1,41 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CurrencyInput > applies custom className 1`] = `
+<div
+  class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium focus-within:ring-2 focus-within:ring-brand-primary focus-within:border-brand-primary custom-class"
+>
+  <div
+    class="absolute left-4 top-1/2 transform -translate-y-1/2 pointer-events-none text-neutral-500"
+  >
+    $
+  </div>
+  <input
+    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-base px-4 pl-12"
+    data-testid="currency-input"
+    inputmode="decimal"
+    placeholder="0.00"
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`CurrencyInput > handles different size variants 1`] = `
+<div
+  class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium focus-within:ring-2 focus-within:ring-brand-primary focus-within:border-brand-primary"
+>
+  <div
+    class="absolute left-4 top-1/2 transform -translate-y-1/2 pointer-events-none text-neutral-500"
+  >
+    $
+  </div>
+  <input
+    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-lg px-6 pl-12"
+    data-testid="currency-input"
+    inputmode="decimal"
+    placeholder="0.00"
+    type="text"
+    value=""
+  />
+</div>
+`;
