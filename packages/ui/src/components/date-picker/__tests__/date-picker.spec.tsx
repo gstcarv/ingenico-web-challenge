@@ -1,6 +1,6 @@
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
-import { DatePicker } from "../date-picker";
+import { DatePicker, DatePickerRenderInputProps } from "../date-picker";
 
 describe("DatePicker", () => {
     it("renders date picker input with correct attributes", () => {
@@ -266,6 +266,27 @@ describe("DatePicker Accessibility", () => {
         const datePicker = screen.getByTestId("date-picker");
         const inputBase = datePicker.querySelector('[role="button"]');
         expect(inputBase).toHaveAttribute("tabIndex", "0");
+    });
+
+    it("renders custom input when renderInput is provided", () => {
+        const CustomInput = ({ value, placeholder, onClick, onKeyDown, disabled }: DatePickerRenderInputProps) => (
+            <button
+                onClick={onClick}
+                onKeyDown={onKeyDown}
+                disabled={disabled}
+                data-testid="custom-input"
+                className="custom-button"
+            >
+                {value || placeholder}
+            </button>
+        );
+
+        render(<DatePicker data-testid="date-picker" renderInput={CustomInput} placeholder="Custom placeholder" />);
+
+        const customInput = screen.getByTestId("custom-input");
+        expect(customInput).toBeInTheDocument();
+        expect(customInput).toHaveTextContent("Custom placeholder");
+        expect(customInput).toHaveClass("custom-button");
     });
 });
 

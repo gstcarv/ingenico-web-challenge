@@ -1,4 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { cn } from "../../utils";
+import { Button } from "../button";
 import { DatePicker } from "./date-picker";
 
 const meta: Meta<typeof DatePicker> = {
@@ -58,5 +60,28 @@ export const Disabled: Story = {
     args: {
         disabled: true,
         placeholder: "Select date...",
+    },
+};
+
+export const WithCustomRender: Story = {
+    args: {
+        placeholder: "Select date...",
+        renderInput: ({ value, placeholder, onClick, onKeyDown, disabled }) => (
+            <Button
+                variant="outline"
+                onClick={onClick}
+                onKeyDown={onKeyDown}
+                disabled={disabled}
+                className="w-[300px] justify-between"
+                role="button"
+                aria-haspopup="dialog"
+                aria-expanded={false}
+                aria-label="Date picker"
+            >
+                <span className={cn(value ? "text-neutral-900" : "text-neutral-500", "block w-full text-center")}>
+                    {value || placeholder}
+                </span>
+            </Button>
+        ),
     },
 };

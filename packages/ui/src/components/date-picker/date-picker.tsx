@@ -8,6 +8,15 @@ import { useClickOutside } from "../../hooks/useClickOutside";
 import { cn } from "../../utils";
 import { InputBase, InputBaseProps } from "../input-base";
 
+export type DatePickerRenderInputProps = {
+    value: string;
+    placeholder: string;
+    onClick: () => void;
+    onKeyDown: (e: React.KeyboardEvent) => void;
+    disabled?: boolean;
+    "data-testid"?: string;
+};
+
 export type DatePickerProps = Omit<ComponentProps<typeof DayPicker>, "mode" | "selected" | "onSelect"> &
     Omit<InputBaseProps, "onClick" | "onKeyDown"> & {
         value?: Date;
@@ -16,6 +25,7 @@ export type DatePickerProps = Omit<ComponentProps<typeof DayPicker>, "mode" | "s
         format?: string;
         disabled?: boolean;
         "data-testid"?: string;
+        renderInput?: (props: DatePickerRenderInputProps) => React.ReactNode;
     };
 
 const datePickerVariants = cva(
@@ -42,6 +52,7 @@ export const DatePicker = ({
     format = "DD/MM/YYYY",
     disabled,
     "data-testid": dataTestId,
+    renderInput,
     ...props
 }: DatePickerProps) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -73,33 +84,46 @@ export const DatePicker = ({
 
     const displayValue = selectedDate ? dayjs(selectedDate).format(format) : "";
 
+    const inputProps = {
+        value: displayValue,
+        placeholder,
+        onClick: handleInputClick,
+        onKeyDown: handleInputKeyDown,
+        disabled,
+        "data-testid": dataTestId,
+    };
+
     return (
         <div className="relative" data-testid={dataTestId} ref={containerRef}>
-            <InputBase
-                className={className}
-                prefix={prefix}
-                suffix={suffix || <Calendar size={20} className="text-neutral-500" />}
-                onClick={handleInputClick}
-                onKeyDown={handleInputKeyDown}
-                tabIndex={0}
-                role="button"
-                aria-haspopup="dialog"
-                aria-expanded={isOpen}
-                aria-label={props["aria-label"] || "Date picker"}
-                aria-describedby={props["aria-describedby"]}
-                aria-disabled={disabled}
-            >
-                <input
-                    type="text"
-                    value={displayValue}
-                    placeholder={placeholder}
-                    readOnly
-                    className={cn(
-                        "w-full h-full bg-transparent focus-visible:ring-2 focus-visible:ring-offset focus-visible:ring-brand-primary rounded-lg outline-none cursor-pointer",
-                        prefix ? "pl-12" : "px-4",
-                    )}
-                />
-            </InputBase>
+            {renderInput ? (
+                renderInput(inputProps)
+            ) : (
+                <InputBase
+                    className={className}
+                    prefix={prefix}
+                    suffix={suffix || <Calendar size={20} className="text-neutral-500" />}
+                    onClick={handleInputClick}
+                    onKeyDown={handleInputKeyDown}
+                    tabIndex={0}
+                    role="button"
+                    aria-haspopup="dialog"
+                    aria-expanded={isOpen}
+                    aria-label={props["aria-label"] || "Date picker"}
+                    aria-describedby={props["aria-describedby"]}
+                    aria-disabled={disabled}
+                >
+                    <input
+                        type="text"
+                        value={displayValue}
+                        placeholder={placeholder}
+                        readOnly
+                        className={cn(
+                            "w-full h-full bg-transparent focus-visible:ring-2 focus-visible:ring-offset focus-visible:ring-brand-primary rounded-lg outline-none cursor-pointer",
+                            prefix ? "pl-12" : "px-4",
+                        )}
+                    />
+                </InputBase>
+            )}
 
             <div
                 className={cn(
