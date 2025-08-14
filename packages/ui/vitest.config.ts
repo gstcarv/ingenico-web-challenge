@@ -8,5 +8,15 @@ export default defineConfig({
         environment: "jsdom",
         setupFiles: ["./src/test/setup.ts"],
         globals: true,
+        coverage: {
+            exclude: [
+                "storybook-static/**",
+                "**/*.stories.*",
+                "**/*.story.*",
+                ".vercel/**",
+                ".tanstack/**",
+                ".nitro/**",
+            ],
+        },
     },
 });
