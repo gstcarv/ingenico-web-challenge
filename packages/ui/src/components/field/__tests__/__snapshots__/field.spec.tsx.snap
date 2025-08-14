@@ -1,0 +1,37 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Field > applies custom className 1`] = `
+<div
+  class="field flex flex-col gap-2 custom-class"
+>
+  <div>
+    Test content
+  </div>
+</div>
+`;
+
+exports[`Field > has correct default classes 1`] = `
+<div
+  class="field flex flex-col gap-2"
+>
+  <div>
+    Test content
+  </div>
+</div>
+`;
+
+exports[`Field.Label > applies custom className 1`] = `
+<label
+  class="text-xs text-neutral-500 uppercase tracking-wide font-medium custom-label-class"
+>
+  Test Label
+</label>
+`;
+
+exports[`Field.Label > has correct default classes 1`] = `
+<label
+  class="text-xs text-neutral-500 uppercase tracking-wide font-medium"
+>
+  Test Label
+</label>
+`;

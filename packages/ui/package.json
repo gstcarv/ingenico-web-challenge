@@ -3,7 +3,8 @@
     "version": "0.0.0",
     "type": "module",
     "exports": {
-        ".": "./src/index.ts"
+        ".": "./src/index.ts",
+        "./main.css": "./src/theme/main.css"
     },
     "license": "MIT",
     "scripts": {
