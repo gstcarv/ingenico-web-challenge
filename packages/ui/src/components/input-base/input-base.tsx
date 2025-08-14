@@ -25,17 +25,13 @@ export const InputBase = ({ className, prefix, suffix, children, ...props }: Inp
     return (
         <div className={cn(inputContainerVariants(), className)} {...props}>
             {prefix && (
-                <div className="absolute left-4 top-1/2 transform -translate-y-1/2 pointer-events-none text-neutral-500">
-                    {prefix}
-                </div>
+                <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-neutral-500">{prefix}</div>
             )}
 
             {children}
 
             {suffix && (
-                <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none text-neutral-500">
-                    {suffix}
-                </div>
+                <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-neutral-500">{suffix}</div>
             )}
         </div>
     );

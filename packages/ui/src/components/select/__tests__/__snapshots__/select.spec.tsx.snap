@@ -75,7 +75,7 @@ exports[`Select > applies correct padding when prefix is present 1`] = `
   class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
 >
   <div
-    class="absolute left-4 top-1/2 transform -translate-y-1/2 pointer-events-none text-neutral-500"
+    class="absolute left-4 top-1/2 transform -translate-y-1/2 text-neutral-500"
   >
     R$
   </div>
