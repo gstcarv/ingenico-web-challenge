@@ -15,7 +15,7 @@ export const useCurrencyForm = () => {
         defaultValues: {
             fromCurrency: "",
             toCurrency: "",
-            amount: 0,
+            amount: undefined,
             date: undefined,
         },
     });

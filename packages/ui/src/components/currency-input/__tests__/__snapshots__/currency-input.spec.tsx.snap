@@ -1,18 +1,13 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`CurrencyInput > applies custom className 1`] = `
+exports[`CurrencyInput > applies correct base classes to container 1`] = `
 <div
-  class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium focus-within:ring-2 focus-within:ring-brand-primary focus-within:border-brand-primary custom-class"
+  class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
 >
-  <div
-    class="absolute left-4 top-1/2 transform -translate-y-1/2 text-neutral-500"
-  >
-    $
-  </div>
   <input
-    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-lg px-4 pl-12"
+    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-lg px-4"
     data-testid="currency-input"
-    inputmode="decimal"
+    inputmode="numeric"
     placeholder="0.00"
     type="text"
     value=""
@@ -20,19 +15,139 @@ exports[`CurrencyInput > applies custom className 1`] = `
 </div>
 `;
 
-exports[`CurrencyInput > handles different size variants 1`] = `
+exports[`CurrencyInput > applies correct classes to input element 1`] = `
 <div
-  class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium focus-within:ring-2 focus-within:ring-brand-primary focus-within:border-brand-primary"
+  class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
+>
+  <input
+    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-lg px-4"
+    data-testid="currency-input"
+    inputmode="numeric"
+    placeholder="0.00"
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`CurrencyInput > applies correct padding when prefix is present 1`] = `
+<div
+  class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
 >
   <div
     class="absolute left-4 top-1/2 transform -translate-y-1/2 text-neutral-500"
   >
-    $
+    R$
   </div>
   <input
     class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-lg px-4 pl-12"
     data-testid="currency-input"
-    inputmode="decimal"
+    inputmode="numeric"
+    placeholder="0.00"
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`CurrencyInput > applies custom className 1`] = `
+<div
+  class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium custom-class"
+>
+  <input
+    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-lg px-4"
+    data-testid="currency-input"
+    inputmode="numeric"
+    placeholder="0.00"
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`CurrencyInput > applies default padding when no prefix is present 1`] = `
+<div
+  class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
+>
+  <input
+    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-lg px-4"
+    data-testid="currency-input"
+    inputmode="numeric"
+    placeholder="0.00"
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`CurrencyInput > applies different sizes correctly 1`] = `
+<div
+  class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
+>
+  <input
+    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-sm px-4"
+    data-testid="currency-input"
+    inputmode="numeric"
+    placeholder="0.00"
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`CurrencyInput > applies different sizes correctly 2`] = `
+<div
+  class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
+>
+  <input
+    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-2xl px-4"
+    data-testid="currency-input"
+    inputmode="numeric"
+    placeholder="0.00"
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`CurrencyInput Variants > applies large size variant 1`] = `
+<div
+  class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
+>
+  <input
+    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-2xl px-4"
+    data-testid="currency-input"
+    inputmode="numeric"
+    placeholder="0.00"
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`CurrencyInput Variants > applies medium size variant (default) 1`] = `
+<div
+  class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
+>
+  <input
+    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-lg px-4"
+    data-testid="currency-input"
+    inputmode="numeric"
+    placeholder="0.00"
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`CurrencyInput Variants > applies small size variant 1`] = `
+<div
+  class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
+>
+  <input
+    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-sm px-4"
+    data-testid="currency-input"
+    inputmode="numeric"
     placeholder="0.00"
     type="text"
     value=""

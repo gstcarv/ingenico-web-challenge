@@ -1,5 +1,6 @@
 import { cva, type VariantProps } from "class-variance-authority";
-import { ComponentProps, useCallback, useMemo, useState, useEffect } from "react";
+import { ComponentProps, Ref, ReactNode } from "react";
+import { NumericFormat } from "react-number-format";
 import { cn } from "../../utils";
 import { InputBase, InputBaseProps } from "../input-base";
 
@@ -19,203 +20,54 @@ const currencyInputVariants = cva(
     },
 );
 
-// Currency symbol mapping
-const CURRENCY_SYMBOLS: Record<string, string> = {
-    USD: "$",
-    EUR: "€",
-    GBP: "£",
-    JPY: "¥",
-    CAD: "C$",
-    AUD: "A$",
-    CHF: "CHF",
-    CNY: "¥",
-    INR: "₹",
-    BRL: "R$",
-};
-
-export type CurrencyInputProps = Omit<ComponentProps<"input">, "value" | "onChange" | "prefix"> &
+export type CurrencyInputProps = Omit<
+    ComponentProps<typeof NumericFormat>,
+    "value" | "onValueChange" | "thousandSeparator" | "decimalSeparator" | "decimalScale" | "allowNegative" | "prefix"
+> &
     VariantProps<typeof currencyInputVariants> &
-    InputBaseProps & {
+    Omit<InputBaseProps, "prefix" | "suffix"> & {
         value?: number;
         onChange?: (value: number | undefined) => void;
         currency?: string;
         placeholder?: string;
-        precision?: number;
-        allowNegative?: boolean;
-        ref?: React.RefObject<HTMLInputElement>;
+        ref?: Ref<HTMLInputElement>;
+        prefix?: ReactNode;
+        suffix?: ReactNode;
     };
 
-export const CurrencyInput = ({
+export const CurrencyInput = ({ 
+    className, 
+    size, 
+    value, 
+    onChange, 
+    placeholder = "0.00", 
+    prefix, 
+    suffix, 
     ref,
-    className,
-    size,
-    value,
-    onChange,
-    placeholder = "0.00",
-    precision = 2,
-    allowNegative = false,
-    prefix,
-    suffix,
-    currency,
-    ...props
+    ...props 
 }: CurrencyInputProps) => {
-    // Determine the prefix to use
-    const inputPrefix = useMemo(() => {
-        if (prefix !== undefined) {
-            return prefix;
-        }
-        if (currency) {
-            return CURRENCY_SYMBOLS[currency] || currency;
-        }
-        return CURRENCY_SYMBOLS.USD; // Default to USD symbol
-    }, [prefix, currency]);
-
-    // Internal state for the input value
-    const [inputValue, setInputValue] = useState<string>("");
-
-    // Update internal state when value prop changes
-    useEffect(() => {
-        if (value === undefined || value === null) {
-            setInputValue("");
-        } else {
-            // Format the value for display
-            const formatted = formatValue(value, precision);
-            setInputValue(formatted);
-        }
-    }, [value, precision]);
-
-    // Format value with commas and decimal places
-    const formatValue = (num: number, decimalPlaces: number): string => {
-        const rounded = Math.round(num * Math.pow(10, decimalPlaces)) / Math.pow(10, decimalPlaces);
-        const parts = rounded.toString().split(".");
-        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
-        if (decimalPlaces === 0) {
-            return parts[0];
-        }
-
-        if (parts.length === 1) {
-            return parts[0] + "." + "0".repeat(decimalPlaces);
-        }
-
-        return parts[0] + "." + parts[1].padEnd(decimalPlaces, "0");
+    const handleValueChange = (values: { floatValue: number | undefined; value: string }) => {
+        onChange?.(values.floatValue);
     };
-
-    // Parse input value to number
-    const parseValue = (input: string): number | undefined => {
-        if (!input || input.trim() === "") {
-            return undefined;
-        }
-
-        // Remove commas and spaces
-        const cleanInput = input.replace(/[, ]/g, "");
-
-        // Check if it's a valid number
-        const parsed = parseFloat(cleanInput);
-        if (isNaN(parsed)) {
-            return undefined;
-        }
-
-        return parsed;
-    };
-
-    // Validate input string
-    const isValidInput = (input: string): boolean => {
-        if (!input || input.trim() === "") {
-            return true;
-        }
-
-        // Allow only numbers, commas, spaces, dots, and optionally minus
-        const validChars = allowNegative ? /^[0-9.,\-\s]*$/ : /^[0-9.,\s]*$/;
-        if (!validChars.test(input)) {
-            return false;
-        }
-
-        // Check for multiple decimal points
-        const decimalCount = (input.match(/\./g) || []).length;
-        if (decimalCount > 1) {
-            return false;
-        }
-
-        // Check for negative values when not allowed
-        if (!allowNegative && input.includes("-")) {
-            return false;
-        }
-
-        return true;
-    };
-
-    const handleChange = useCallback(
-        (e: React.ChangeEvent<HTMLInputElement>) => {
-            const newValue = e.target.value;
-
-            // Handle empty input
-            if (!newValue || newValue.trim() === "") {
-                setInputValue("");
-                onChange?.(undefined);
-                return;
-            }
-
-            // Only call onChange if the input is valid
-            if (isValidInput(newValue)) {
-                const parsed = parseValue(newValue);
-                if (parsed !== undefined) {
-                    // Format the value immediately for display
-                    const formatted = formatValue(parsed, precision);
-                    setInputValue(formatted);
-                    onChange?.(parsed);
-                } else {
-                    setInputValue(newValue);
-                }
-            } else {
-                setInputValue(newValue);
-            }
-        },
-        [onChange, allowNegative, precision],
-    );
-
-    const handleBlur = useCallback(
-        (e: React.FocusEvent<HTMLInputElement>) => {
-            const currentValue = e.target.value;
-
-            if (!isValidInput(currentValue)) {
-                // Clear invalid input
-                setInputValue("");
-                onChange?.(undefined);
-                return;
-            }
-
-            const parsed = parseValue(currentValue);
-            if (parsed !== undefined) {
-                // Format the value on blur
-                const formatted = formatValue(parsed, precision);
-                setInputValue(formatted);
-                onChange?.(parsed);
-            }
-        },
-        [onChange, precision],
-    );
 
     return (
-        <InputBase
-            className={cn(
-                "focus-within:ring-2 focus-within:ring-brand-primary focus-within:border-brand-primary",
-                className,
-            )}
-            prefix={inputPrefix}
-            suffix={suffix}
-        >
-            <input
-                ref={ref}
-                type="text"
-                inputMode="decimal"
-                value={inputValue}
-                onChange={handleChange}
-                onBlur={handleBlur}
+        <InputBase className={className} prefix={prefix} suffix={suffix}>
+            <NumericFormat
+                getInputRef={ref}
+                className={cn(currencyInputVariants({ size }), prefix ? "pl-12" : "px-4")}
+                value={value}
+                onValueChange={handleValueChange}
+                thousandSeparator=","
+                decimalSeparator="."
+                decimalScale={2}
+                allowNegative={false}
                 placeholder={placeholder}
-                className={cn(currencyInputVariants({ size }), inputPrefix && "pl-12", suffix && "pr-12")}
+                prefix=""
+                data-testid="currency-input"
                 {...props}
             />
         </InputBase>
     );
 };
+
+CurrencyInput.displayName = "CurrencyInput";
