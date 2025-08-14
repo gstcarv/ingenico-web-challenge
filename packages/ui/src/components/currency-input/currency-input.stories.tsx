@@ -17,18 +17,6 @@ const meta: Meta<typeof CurrencyInput> = {
             control: "select",
             options: ["USD", "EUR", "GBP", "JPY", "CAD", "AUD", "CHF", "CNY", "INR", "BRL"],
         },
-        size: {
-            control: "select",
-            options: ["sm", "md", "lg"],
-        },
-        precision: {
-            control: "number",
-            min: 0,
-            max: 4,
-        },
-        allowNegative: {
-            control: "boolean",
-        },
     },
 };
 
@@ -38,8 +26,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     args: {
         placeholder: "Insert amount",
-        precision: 2,
-        allowNegative: false,
     },
 };
 

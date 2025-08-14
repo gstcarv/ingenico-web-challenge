@@ -8,6 +8,10 @@
       },
       "lint": {},
       "test": {},
+      "type-check": {
+          "dependsOn": ["^type-check"],
+          "inputs": ["$TURBO_DEFAULT$", "tsconfig.json", "tsconfig.*.json"]
+      },
       "dev": {
           "cache": false,
           "persistent": true

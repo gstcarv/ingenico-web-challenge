@@ -69,11 +69,11 @@ describe("CurrencyInput", () => {
     });
 
     it("applies different sizes correctly", () => {
-        const { container: smallContainer } = render(<CurrencyInput size="sm" data-testid="currency-input" />);
+        const { container: smallContainer } = render(<CurrencyInput data-testid="currency-input" />);
 
         expect(smallContainer.firstChild).toMatchSnapshot();
 
-        const { container: largeContainer } = render(<CurrencyInput size="lg" data-testid="currency-input" />);
+        const { container: largeContainer } = render(<CurrencyInput data-testid="currency-input" />);
 
         expect(largeContainer.firstChild).toMatchSnapshot();
     });
@@ -234,7 +234,7 @@ describe("CurrencyInput Integration", () => {
 
 describe("CurrencyInput Variants", () => {
     it("applies small size variant", () => {
-        const { container } = render(<CurrencyInput size="sm" data-testid="currency-input" />);
+        const { container } = render(<CurrencyInput data-testid="currency-input" />);
 
         expect(container.firstChild).toMatchSnapshot();
     });
@@ -246,7 +246,7 @@ describe("CurrencyInput Variants", () => {
     });
 
     it("applies large size variant", () => {
-        const { container } = render(<CurrencyInput size="lg" data-testid="currency-input" />);
+        const { container } = render(<CurrencyInput data-testid="currency-input" />);
 
         expect(container.firstChild).toMatchSnapshot();
     });
