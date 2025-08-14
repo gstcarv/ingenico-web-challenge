@@ -20,10 +20,16 @@ export const Route = createRootRouteWithContext<{
                 content: "width=device-width, initial-scale=1",
             },
             {
-                title: "TanStack Start Starter",
+                title: "Currency Converter - Ingenico",
             },
         ],
         links: [
+            {
+                rel: "preload",
+                href: appCss,
+                as: "style",
+                fetchPriority: "high",
+            },
             {
                 rel: "stylesheet",
                 href: appCss,
@@ -36,6 +42,12 @@ export const Route = createRootRouteWithContext<{
                 rel: "preconnect",
                 href: "https://fonts.gstatic.com",
                 crossOrigin: "anonymous",
+            },
+            {
+                rel: "preload",
+                href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap",
+                as: "style",
+                fetchPriority: "high",
             },
             {
                 rel: "stylesheet",

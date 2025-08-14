@@ -17,8 +17,8 @@ A modern currency conversion application built with React, TypeScript, and Vite.
 
 ```bash
 # Clone the repository
-git clone <repository-url>
-cd currency-converter
+git clone https://github.com/gstcarv/ingenico-web-challenge.git
+cd ingenico-web-challenge
 
 # Install dependencies
 pnpm install
