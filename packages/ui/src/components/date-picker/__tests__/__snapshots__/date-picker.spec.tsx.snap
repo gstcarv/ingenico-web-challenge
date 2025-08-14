@@ -1,0 +1,827 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DatePicker > applies custom className 1`] = `
+<div
+  class="relative"
+  data-testid="date-picker"
+>
+  <div
+    aria-expanded="false"
+    aria-haspopup="dialog"
+    aria-label="Date picker"
+    class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium custom-class"
+    role="button"
+    tabindex="0"
+  >
+    <input
+      class="w-full h-full bg-transparent focus-visible:ring-2 focus-visible:ring-offset focus-visible:ring-brand-primary rounded-lg outline-none cursor-pointer px-4"
+      placeholder="Select date..."
+      readonly=""
+      type="text"
+      value=""
+    />
+    <div
+      class="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none text-neutral-500"
+    >
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-calendar text-neutral-500"
+        fill="none"
+        height="20"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M8 2v4"
+        />
+        <path
+          d="M16 2v4"
+        />
+        <rect
+          height="18"
+          rx="2"
+          width="18"
+          x="3"
+          y="4"
+        />
+        <path
+          d="M3 10h18"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    class="absolute top-full left-0 mt-1 bg-white border border-neutral-200 rounded-lg shadow-lg z-50 transition-all duration-200 ease-out opacity-0 scale-95 -translate-y-2 pointer-events-none custom-class"
+  >
+    <div
+      class="rdp-root p-6"
+      data-mode="single"
+    >
+      <div
+        class="rdp-months"
+      >
+        <nav
+          aria-label=""
+          class="rdp-nav"
+        >
+          <button
+            aria-label="Go to the Previous Month"
+            class="rdp-button_previous"
+            type="button"
+          >
+            <svg
+              class="rdp-chevron"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <polygon
+                points="16 18.112 9.81111111 12 16 5.87733333 14.0888889 4 6 12 14.0888889 20"
+              />
+            </svg>
+          </button>
+          <button
+            aria-label="Go to the Next Month"
+            class="rdp-button_next"
+            type="button"
+          >
+            <svg
+              class="rdp-chevron"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <polygon
+                points="8 18.112 14.18888889 12 8 5.87733333 9.91111111 4 18 12 9.91111111 20"
+              />
+            </svg>
+          </button>
+        </nav>
+        <div
+          class="rdp-month"
+        >
+          <div
+            class="rdp-month_caption"
+          >
+            <span
+              aria-live="polite"
+              class="rdp-caption_label"
+              role="status"
+            >
+              August 2025
+            </span>
+          </div>
+          <table
+            aria-label="August 2025"
+            aria-multiselectable="false"
+            class="rdp-month_grid"
+            role="grid"
+          >
+            <thead
+              aria-hidden="true"
+            >
+              <tr
+                class="rdp-weekdays"
+              >
+                <th
+                  aria-label="Sunday"
+                  class="rdp-weekday"
+                  scope="col"
+                >
+                  Su
+                </th>
+                <th
+                  aria-label="Monday"
+                  class="rdp-weekday"
+                  scope="col"
+                >
+                  Mo
+                </th>
+                <th
+                  aria-label="Tuesday"
+                  class="rdp-weekday"
+                  scope="col"
+                >
+                  Tu
+                </th>
+                <th
+                  aria-label="Wednesday"
+                  class="rdp-weekday"
+                  scope="col"
+                >
+                  We
+                </th>
+                <th
+                  aria-label="Thursday"
+                  class="rdp-weekday"
+                  scope="col"
+                >
+                  Th
+                </th>
+                <th
+                  aria-label="Friday"
+                  class="rdp-weekday"
+                  scope="col"
+                >
+                  Fr
+                </th>
+                <th
+                  aria-label="Saturday"
+                  class="rdp-weekday"
+                  scope="col"
+                >
+                  Sa
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              class="rdp-weeks"
+            >
+              <tr
+                class="rdp-week"
+              >
+                <td
+                  class="rdp-day rdp-outside"
+                  data-day="2025-07-27"
+                  data-month="2025-07"
+                  data-outside="true"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Sunday, July 27th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    27
+                  </button>
+                </td>
+                <td
+                  class="rdp-day rdp-outside"
+                  data-day="2025-07-28"
+                  data-month="2025-07"
+                  data-outside="true"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Monday, July 28th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    28
+                  </button>
+                </td>
+                <td
+                  class="rdp-day rdp-outside"
+                  data-day="2025-07-29"
+                  data-month="2025-07"
+                  data-outside="true"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Tuesday, July 29th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    29
+                  </button>
+                </td>
+                <td
+                  class="rdp-day rdp-outside"
+                  data-day="2025-07-30"
+                  data-month="2025-07"
+                  data-outside="true"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Wednesday, July 30th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    30
+                  </button>
+                </td>
+                <td
+                  class="rdp-day rdp-outside"
+                  data-day="2025-07-31"
+                  data-month="2025-07"
+                  data-outside="true"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Thursday, July 31st, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    31
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-01"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Friday, August 1st, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    1
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-02"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Saturday, August 2nd, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    2
+                  </button>
+                </td>
+              </tr>
+              <tr
+                class="rdp-week"
+              >
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-03"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Sunday, August 3rd, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    3
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-04"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Monday, August 4th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    4
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-05"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Tuesday, August 5th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    5
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-06"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Wednesday, August 6th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    6
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-07"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Thursday, August 7th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    7
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-08"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Friday, August 8th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    8
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-09"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Saturday, August 9th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    9
+                  </button>
+                </td>
+              </tr>
+              <tr
+                class="rdp-week"
+              >
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-10"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Sunday, August 10th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    10
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-11"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Monday, August 11th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    11
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-12"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Tuesday, August 12th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    12
+                  </button>
+                </td>
+                <td
+                  class="rdp-day rdp-today"
+                  data-day="2025-08-13"
+                  data-today="true"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Today, Wednesday, August 13th, 2025"
+                    class="rdp-day_button"
+                    tabindex="0"
+                    type="button"
+                  >
+                    13
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-14"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Thursday, August 14th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    14
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-15"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Friday, August 15th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    15
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-16"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Saturday, August 16th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    16
+                  </button>
+                </td>
+              </tr>
+              <tr
+                class="rdp-week"
+              >
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-17"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Sunday, August 17th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    17
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-18"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Monday, August 18th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    18
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-19"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Tuesday, August 19th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    19
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-20"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Wednesday, August 20th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    20
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-21"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Thursday, August 21st, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    21
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-22"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Friday, August 22nd, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    22
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-23"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Saturday, August 23rd, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    23
+                  </button>
+                </td>
+              </tr>
+              <tr
+                class="rdp-week"
+              >
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-24"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Sunday, August 24th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    24
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-25"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Monday, August 25th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    25
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-26"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Tuesday, August 26th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    26
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-27"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Wednesday, August 27th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    27
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-28"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Thursday, August 28th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    28
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-29"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Friday, August 29th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    29
+                  </button>
+                </td>
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-30"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Saturday, August 30th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    30
+                  </button>
+                </td>
+              </tr>
+              <tr
+                class="rdp-week"
+              >
+                <td
+                  class="rdp-day"
+                  data-day="2025-08-31"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Sunday, August 31st, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    31
+                  </button>
+                </td>
+                <td
+                  class="rdp-day rdp-outside"
+                  data-day="2025-09-01"
+                  data-month="2025-09"
+                  data-outside="true"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Monday, September 1st, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    1
+                  </button>
+                </td>
+                <td
+                  class="rdp-day rdp-outside"
+                  data-day="2025-09-02"
+                  data-month="2025-09"
+                  data-outside="true"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Tuesday, September 2nd, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    2
+                  </button>
+                </td>
+                <td
+                  class="rdp-day rdp-outside"
+                  data-day="2025-09-03"
+                  data-month="2025-09"
+                  data-outside="true"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Wednesday, September 3rd, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    3
+                  </button>
+                </td>
+                <td
+                  class="rdp-day rdp-outside"
+                  data-day="2025-09-04"
+                  data-month="2025-09"
+                  data-outside="true"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Thursday, September 4th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    4
+                  </button>
+                </td>
+                <td
+                  class="rdp-day rdp-outside"
+                  data-day="2025-09-05"
+                  data-month="2025-09"
+                  data-outside="true"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Friday, September 5th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    5
+                  </button>
+                </td>
+                <td
+                  class="rdp-day rdp-outside"
+                  data-day="2025-09-06"
+                  data-month="2025-09"
+                  data-outside="true"
+                  role="gridcell"
+                >
+                  <button
+                    aria-label="Saturday, September 6th, 2025"
+                    class="rdp-day_button"
+                    tabindex="-1"
+                    type="button"
+                  >
+                    6
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

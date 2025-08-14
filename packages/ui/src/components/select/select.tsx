@@ -14,7 +14,7 @@ export const Select = ({ className, suffix, prefix, ...props }: SelectProps) => 
             tabIndex={0}
             className={cn(
                 "select__input w-full h-full appearance-none bg-transparent focus-visible:ring-2 focus-visible:ring-offset focus-visible:ring-brand-primary rounded-lg outline-none",
-                prefix ? "pl-12" : "px-4"
+                prefix ? "pl-12" : "px-4",
             )}
         />
 

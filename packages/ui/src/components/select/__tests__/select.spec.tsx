@@ -8,7 +8,7 @@ describe("Select", () => {
             <Select data-testid="select">
                 <Select.Option value="option1">Option 1</Select.Option>
                 <Select.Option value="option2">Option 2</Select.Option>
-            </Select>
+            </Select>,
         );
 
         const selectElement = screen.getByTestId("select");
@@ -22,7 +22,7 @@ describe("Select", () => {
                 <Select.Option value="option1">Option 1</Select.Option>
                 <Select.Option value="option2">Option 2</Select.Option>
                 <Select.Option value="option3">Option 3</Select.Option>
-            </Select>
+            </Select>,
         );
 
         expect(screen.getByText("Option 1")).toBeInTheDocument();
@@ -34,7 +34,7 @@ describe("Select", () => {
         const { container } = render(
             <Select className="custom-class" data-testid="select">
                 <Select.Option value="option1">Option 1</Select.Option>
-            </Select>
+            </Select>,
         );
 
         expect(container.firstChild).toMatchSnapshot();
@@ -44,7 +44,7 @@ describe("Select", () => {
         render(
             <Select prefix="R$" data-testid="select">
                 <Select.Option value="option1">Option 1</Select.Option>
-            </Select>
+            </Select>,
         );
 
         expect(screen.getByText("R$")).toBeInTheDocument();
@@ -56,7 +56,7 @@ describe("Select", () => {
         render(
             <Select prefix={<TestIcon />} data-testid="select">
                 <Select.Option value="option1">Option 1</Select.Option>
-            </Select>
+            </Select>,
         );
 
         expect(screen.getByTestId("icon")).toBeInTheDocument();
@@ -66,7 +66,7 @@ describe("Select", () => {
         const { container } = render(
             <Select prefix="R$" data-testid="select">
                 <Select.Option value="option1">Option 1</Select.Option>
-            </Select>
+            </Select>,
         );
 
         expect(container.firstChild).toMatchSnapshot();
@@ -76,7 +76,7 @@ describe("Select", () => {
         const { container } = render(
             <Select data-testid="select">
                 <Select.Option value="option1">Option 1</Select.Option>
-            </Select>
+            </Select>,
         );
 
         expect(container.firstChild).toMatchSnapshot();
@@ -89,7 +89,7 @@ describe("Select", () => {
             <Select onChange={handleChange} data-testid="select">
                 <Select.Option value="option1">Option 1</Select.Option>
                 <Select.Option value="option2">Option 2</Select.Option>
-            </Select>
+            </Select>,
         );
 
         const selectElement = screen.getByTestId("select");
@@ -102,7 +102,7 @@ describe("Select", () => {
         render(
             <Select disabled data-testid="select">
                 <Select.Option value="option1">Option 1</Select.Option>
-            </Select>
+            </Select>,
         );
 
         const selectElement = screen.getByTestId("select");
@@ -116,7 +116,7 @@ describe("Select", () => {
             <Select value="option2" onChange={handleChange} data-testid="select">
                 <Select.Option value="option1">Option 1</Select.Option>
                 <Select.Option value="option2">Option 2</Select.Option>
-            </Select>
+            </Select>,
         );
 
         const selectElement = screen.getByTestId("select");
@@ -128,7 +128,7 @@ describe("Select", () => {
             <Select multiple data-testid="select">
                 <Select.Option value="option1">Option 1</Select.Option>
                 <Select.Option value="option2">Option 2</Select.Option>
-            </Select>
+            </Select>,
         );
 
         const selectElement = screen.getByTestId("select");
@@ -139,7 +139,7 @@ describe("Select", () => {
         render(
             <Select data-testid="select">
                 <Select.Option value="option1">Option 1</Select.Option>
-            </Select>
+            </Select>,
         );
 
         const chevronIcon = screen.getByTestId("select").parentElement?.querySelector("svg");
@@ -150,7 +150,7 @@ describe("Select", () => {
         const { container } = render(
             <Select data-testid="select">
                 <Select.Option value="option1">Option 1</Select.Option>
-            </Select>
+            </Select>,
         );
 
         expect(container.firstChild).toMatchSnapshot();
@@ -160,7 +160,7 @@ describe("Select", () => {
         const { container } = render(
             <Select data-testid="select">
                 <Select.Option value="option1">Option 1</Select.Option>
-            </Select>
+            </Select>,
         );
 
         expect(container.firstChild).toMatchSnapshot();
@@ -178,7 +178,7 @@ describe("Select", () => {
         render(
             <Select data-testid="select" name="currency" id="currency-select" required aria-label="Select currency">
                 <Select.Option value="usd">USD</Select.Option>
-            </Select>
+            </Select>,
         );
 
         const selectElement = screen.getByTestId("select");
@@ -196,7 +196,7 @@ describe("Select.Option", () => {
                 <Select.Option value="option1" data-testid="option">
                     Option 1
                 </Select.Option>
-            </Select>
+            </Select>,
         );
 
         const optionElement = screen.getByTestId("option");
@@ -211,7 +211,7 @@ describe("Select.Option", () => {
                 <Select.Option value="option1" disabled data-testid="option">
                     Option 1
                 </Select.Option>
-            </Select>
+            </Select>,
         );
 
         const optionElement = screen.getByTestId("option");
@@ -224,7 +224,7 @@ describe("Select.Option", () => {
                 <Select.Option value="option1" data-testid="option" aria-label="First option">
                     Option 1
                 </Select.Option>
-            </Select>
+            </Select>,
         );
 
         const optionElement = screen.getByTestId("option");
@@ -237,7 +237,7 @@ describe("Select.Option", () => {
                 <Select.Option value="" data-testid="option">
                     Empty Option
                 </Select.Option>
-            </Select>
+            </Select>,
         );
 
         const optionElement = screen.getByTestId("option");
@@ -251,7 +251,7 @@ describe("Select Accessibility", () => {
         render(
             <Select aria-label="Select currency" data-testid="select">
                 <Select.Option value="usd">USD</Select.Option>
-            </Select>
+            </Select>,
         );
 
         const selectElement = screen.getByTestId("select");
@@ -262,7 +262,7 @@ describe("Select Accessibility", () => {
         render(
             <Select aria-describedby="description" data-testid="select">
                 <Select.Option value="usd">USD</Select.Option>
-            </Select>
+            </Select>,
         );
 
         const selectElement = screen.getByTestId("select");
@@ -273,7 +273,7 @@ describe("Select Accessibility", () => {
         render(
             <Select role="combobox" data-testid="select">
                 <Select.Option value="usd">USD</Select.Option>
-            </Select>
+            </Select>,
         );
 
         const selectElement = screen.getByTestId("select");
@@ -292,7 +292,7 @@ describe("Select Integration", () => {
                     <Select.Option value="eur">EUR</Select.Option>
                 </Select>
                 <button type="submit">Submit</button>
-            </form>
+            </form>,
         );
 
         const selectElement = screen.getByTestId("select");
@@ -311,7 +311,7 @@ describe("Select Integration", () => {
             <Select onChange={handleChange} data-testid="select">
                 <Select.Option value="option1">Option 1</Select.Option>
                 <Select.Option value="option2">Option 2</Select.Option>
-            </Select>
+            </Select>,
         );
 
         const selectElement = screen.getByTestId("select");

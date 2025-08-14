@@ -38,13 +38,8 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     args: {
         placeholder: "Insert amount",
-        decimalScale: 2,
-        allowDecimals: true,
-        fixedDecimalLength: 2,
-        decimalSeparator: ".",
-        groupSeparator: ",",
-        suffix: "USD",
-        prefix: "$",
+        precision: 2,
+        allowNegative: false,
     },
 };
 

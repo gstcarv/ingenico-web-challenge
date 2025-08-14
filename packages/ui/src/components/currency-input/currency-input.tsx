@@ -16,7 +16,7 @@ const currencyInputVariants = cva(
         defaultVariants: {
             size: "md",
         },
-    }
+    },
 );
 
 // Currency symbol mapping
@@ -89,15 +89,15 @@ export const CurrencyInput = ({
         const rounded = Math.round(num * Math.pow(10, decimalPlaces)) / Math.pow(10, decimalPlaces);
         const parts = rounded.toString().split(".");
         parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        
+
         if (decimalPlaces === 0) {
             return parts[0];
         }
-        
+
         if (parts.length === 1) {
             return parts[0] + "." + "0".repeat(decimalPlaces);
         }
-        
+
         return parts[0] + "." + parts[1].padEnd(decimalPlaces, "0");
     };
 
@@ -106,16 +106,16 @@ export const CurrencyInput = ({
         if (!input || input.trim() === "") {
             return undefined;
         }
-        
+
         // Remove commas and spaces
         const cleanInput = input.replace(/[, ]/g, "");
-        
+
         // Check if it's a valid number
         const parsed = parseFloat(cleanInput);
         if (isNaN(parsed)) {
             return undefined;
         }
-        
+
         return parsed;
     };
 
@@ -124,38 +124,38 @@ export const CurrencyInput = ({
         if (!input || input.trim() === "") {
             return true;
         }
-        
+
         // Allow only numbers, commas, spaces, dots, and optionally minus
         const validChars = allowNegative ? /^[0-9.,\-\s]*$/ : /^[0-9.,\s]*$/;
         if (!validChars.test(input)) {
             return false;
         }
-        
+
         // Check for multiple decimal points
         const decimalCount = (input.match(/\./g) || []).length;
         if (decimalCount > 1) {
             return false;
         }
-        
+
         // Check for negative values when not allowed
         if (!allowNegative && input.includes("-")) {
             return false;
         }
-        
+
         return true;
     };
 
     const handleChange = useCallback(
         (e: React.ChangeEvent<HTMLInputElement>) => {
             const newValue = e.target.value;
-            
+
             // Handle empty input
             if (!newValue || newValue.trim() === "") {
                 setInputValue("");
                 onChange?.(undefined);
                 return;
             }
-            
+
             // Only call onChange if the input is valid
             if (isValidInput(newValue)) {
                 const parsed = parseValue(newValue);
@@ -171,20 +171,20 @@ export const CurrencyInput = ({
                 setInputValue(newValue);
             }
         },
-        [onChange, allowNegative, precision]
+        [onChange, allowNegative, precision],
     );
 
     const handleBlur = useCallback(
         (e: React.FocusEvent<HTMLInputElement>) => {
             const currentValue = e.target.value;
-            
+
             if (!isValidInput(currentValue)) {
                 // Clear invalid input
                 setInputValue("");
                 onChange?.(undefined);
                 return;
             }
-            
+
             const parsed = parseValue(currentValue);
             if (parsed !== undefined) {
                 // Format the value on blur
@@ -193,14 +193,14 @@ export const CurrencyInput = ({
                 onChange?.(parsed);
             }
         },
-        [onChange, precision]
+        [onChange, precision],
     );
 
     return (
         <InputBase
             className={cn(
                 "focus-within:ring-2 focus-within:ring-brand-primary focus-within:border-brand-primary",
-                className
+                className,
             )}
             prefix={inputPrefix}
             suffix={suffix}

@@ -6,7 +6,7 @@ describe("InputBase", () => {
         render(
             <InputBase>
                 <input placeholder="Test input" />
-            </InputBase>
+            </InputBase>,
         );
 
         expect(screen.getByPlaceholderText("Test input")).toBeInTheDocument();
@@ -16,7 +16,7 @@ describe("InputBase", () => {
         render(
             <InputBase prefix="$">
                 <input placeholder="Amount" />
-            </InputBase>
+            </InputBase>,
         );
 
         expect(screen.getByText("$")).toBeInTheDocument();
@@ -27,7 +27,7 @@ describe("InputBase", () => {
         render(
             <InputBase suffix="kg">
                 <input placeholder="Weight" />
-            </InputBase>
+            </InputBase>,
         );
 
         expect(screen.getByText("kg")).toBeInTheDocument();
@@ -38,7 +38,7 @@ describe("InputBase", () => {
         render(
             <InputBase prefix="@" suffix=".com">
                 <input placeholder="username" />
-            </InputBase>
+            </InputBase>,
         );
 
         expect(screen.getByText("@")).toBeInTheDocument();
@@ -50,7 +50,7 @@ describe("InputBase", () => {
         const { container } = render(
             <InputBase className="custom-class">
                 <input />
-            </InputBase>
+            </InputBase>,
         );
 
         expect(container.firstChild).toHaveClass("custom-class");
@@ -60,7 +60,7 @@ describe("InputBase", () => {
         render(
             <InputBase data-testid="input-base" aria-label="Test input">
                 <input />
-            </InputBase>
+            </InputBase>,
         );
 
         expect(screen.getByTestId("input-base")).toBeInTheDocument();
@@ -71,7 +71,7 @@ describe("InputBase", () => {
         render(
             <InputBase>
                 <input placeholder="Simple input" />
-            </InputBase>
+            </InputBase>,
         );
 
         expect(screen.getByPlaceholderText("Simple input")).toBeInTheDocument();

@@ -18,7 +18,7 @@ const inputContainerVariants = cva(
         defaultVariants: {
             variant: "default",
         },
-    }
+    },
 );
 
 export const InputBase = ({ className, prefix, suffix, children, ...props }: InputBaseProps) => {

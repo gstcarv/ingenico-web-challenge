@@ -16,7 +16,7 @@ describe("Button", () => {
         const { container } = render(
             <Button className="custom-class" data-testid="button">
                 Button
-            </Button>
+            </Button>,
         );
 
         expect(container.firstChild).toMatchSnapshot();
@@ -28,7 +28,7 @@ describe("Button", () => {
         render(
             <Button onClick={handleClick} data-testid="button">
                 Click me
-            </Button>
+            </Button>,
         );
 
         const buttonElement = screen.getByTestId("button");
@@ -43,7 +43,7 @@ describe("Button", () => {
         render(
             <Button disabled onClick={handleClick} data-testid="button">
                 Disabled Button
-            </Button>
+            </Button>,
         );
 
         const buttonElement = screen.getByTestId("button");
@@ -59,7 +59,7 @@ describe("Button", () => {
         render(
             <Button ref={ref} data-testid="button">
                 Button
-            </Button>
+            </Button>,
         );
 
         expect(ref).toHaveBeenCalledWith(screen.getByTestId("button"));
@@ -69,7 +69,7 @@ describe("Button", () => {
         render(
             <Button data-testid="button" name="submit-button" id="submit-btn" type="submit" aria-label="Submit form">
                 Submit
-            </Button>
+            </Button>,
         );
 
         const buttonElement = screen.getByTestId("button");
@@ -85,7 +85,7 @@ describe("Button Variants", () => {
         const { container } = render(
             <Button variant="primary" data-testid="button">
                 Primary Button
-            </Button>
+            </Button>,
         );
 
         expect(container.firstChild).toMatchSnapshot();
@@ -95,7 +95,7 @@ describe("Button Variants", () => {
         const { container } = render(
             <Button variant="secondary" data-testid="button">
                 Secondary Button
-            </Button>
+            </Button>,
         );
 
         expect(container.firstChild).toMatchSnapshot();
@@ -105,7 +105,7 @@ describe("Button Variants", () => {
         const { container } = render(
             <Button variant="outline" data-testid="button">
                 Outline Button
-            </Button>
+            </Button>,
         );
 
         expect(container.firstChild).toMatchSnapshot();
@@ -115,7 +115,7 @@ describe("Button Variants", () => {
         const { container } = render(
             <Button variant="ghost" data-testid="button">
                 Ghost Button
-            </Button>
+            </Button>,
         );
 
         expect(container.firstChild).toMatchSnapshot();
@@ -125,7 +125,7 @@ describe("Button Variants", () => {
         const { container } = render(
             <Button variant="destructive" data-testid="button">
                 Destructive Button
-            </Button>
+            </Button>,
         );
 
         expect(container.firstChild).toMatchSnapshot();
@@ -143,7 +143,7 @@ describe("Button Sizes", () => {
         const { container } = render(
             <Button size="sm" data-testid="button">
                 Small Button
-            </Button>
+            </Button>,
         );
 
         expect(container.firstChild).toMatchSnapshot();
@@ -153,7 +153,7 @@ describe("Button Sizes", () => {
         const { container } = render(
             <Button size="md" data-testid="button">
                 Medium Button
-            </Button>
+            </Button>,
         );
 
         expect(container.firstChild).toMatchSnapshot();
@@ -163,7 +163,7 @@ describe("Button Sizes", () => {
         const { container } = render(
             <Button size="lg" data-testid="button">
                 Large Button
-            </Button>
+            </Button>,
         );
 
         expect(container.firstChild).toMatchSnapshot();
@@ -184,7 +184,7 @@ describe("Button with Icons", () => {
             <Button data-testid="button">
                 <TestIcon />
                 Launch
-            </Button>
+            </Button>,
         );
 
         expect(screen.getByTestId("icon")).toBeInTheDocument();
@@ -198,7 +198,7 @@ describe("Button with Icons", () => {
             <Button data-testid="button">
                 Send
                 <TestIcon />
-            </Button>
+            </Button>,
         );
 
         expect(screen.getByTestId("icon")).toBeInTheDocument();
@@ -211,7 +211,7 @@ describe("Button with Icons", () => {
         render(
             <Button data-testid="button" aria-label="Like">
                 <TestIcon />
-            </Button>
+            </Button>,
         );
 
         expect(screen.getByTestId("icon")).toBeInTheDocument();
@@ -224,7 +224,7 @@ describe("Button Accessibility", () => {
         render(
             <Button aria-label="Submit form" data-testid="button">
                 Submit
-            </Button>
+            </Button>,
         );
 
         const buttonElement = screen.getByTestId("button");
@@ -235,7 +235,7 @@ describe("Button Accessibility", () => {
         render(
             <Button aria-describedby="description" data-testid="button">
                 Button
-            </Button>
+            </Button>,
         );
 
         const buttonElement = screen.getByTestId("button");
@@ -246,7 +246,7 @@ describe("Button Accessibility", () => {
         render(
             <Button role="menuitem" data-testid="button">
                 Menu Item
-            </Button>
+            </Button>,
         );
 
         const buttonElement = screen.getByTestId("button");
@@ -271,7 +271,7 @@ describe("Button Integration", () => {
                 <Button type="submit" data-testid="button">
                     Submit Form
                 </Button>
-            </form>
+            </form>,
         );
 
         const buttonElement = screen.getByTestId("button");
@@ -286,7 +286,7 @@ describe("Button Integration", () => {
         render(
             <Button onClick={handleClick} data-testid="button">
                 Focusable Button
-            </Button>
+            </Button>,
         );
 
         const buttonElement = screen.getByTestId("button");
@@ -306,7 +306,7 @@ describe("Button Integration", () => {
         render(
             <Button disabled onClick={handleClick} data-testid="button">
                 Disabled Button
-            </Button>
+            </Button>,
         );
 
         const buttonElement = screen.getByTestId("button");
@@ -352,7 +352,7 @@ describe("Button Edge Cases", () => {
                 <span>Text</span>
                 <strong>Bold</strong>
                 <em>Italic</em>
-            </Button>
+            </Button>,
         );
 
         const buttonElement = screen.getByTestId("button");
