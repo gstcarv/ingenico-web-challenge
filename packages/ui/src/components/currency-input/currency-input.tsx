@@ -22,7 +22,14 @@ const currencyInputVariants = cva(
 
 export type CurrencyInputProps = Omit<
     ComponentProps<typeof NumericFormat>,
-    "value" | "onValueChange" | "thousandSeparator" | "decimalSeparator" | "decimalScale" | "allowNegative" | "prefix"
+    | "value"
+    | "onValueChange"
+    | "thousandSeparator"
+    | "decimalSeparator"
+    | "decimalScale"
+    | "allowNegative"
+    | "prefix"
+    | "suffix"
 > &
     VariantProps<typeof currencyInputVariants> &
     Omit<InputBaseProps, "prefix" | "suffix"> & {

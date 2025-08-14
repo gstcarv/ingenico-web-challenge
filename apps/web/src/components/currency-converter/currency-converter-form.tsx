@@ -1,8 +1,9 @@
-import { Button, CurrencyInput, DatePicker, Field } from "@ingenico-challenge/ui";
+import { Button, DatePicker, Field } from "@ingenico-challenge/ui";
 import { ArrowLeftRight, ArrowUpDown, Calendar } from "lucide-react";
-import { Controller } from "react-hook-form";
 import { CurrencySelect } from "./currency-select";
+import { CurrencyAmountInput } from "./currency-amount-input";
 import { useCurrencyForm } from "../../hooks/use-currency-form";
+import { Controller } from "react-hook-form";
 
 export const CurrencyConverterForm = () => {
     const { form, onSubmit, handleSwapCurrencies, isSubmitting, errors } = useCurrencyForm();
@@ -38,35 +39,27 @@ export const CurrencyConverterForm = () => {
 
             <Field>
                 <Field.Label htmlFor="amount">Value</Field.Label>
-                <Controller
-                    name="amount"
+                <CurrencyAmountInput
                     control={form.control}
-                    render={({ field }) => (
-                        <CurrencyInput
-                            id="amount"
-                            value={field.value}
-                            onChange={field.onChange}
-                            className="w-full shadow-none border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
-                            suffix={
-                                <Controller
-                                    name="date"
-                                    control={form.control}
-                                    render={({ field: dateField }) => (
-                                        <DatePicker
-                                            value={dateField.value}
-                                            onChange={dateField.onChange}
-                                            renderInput={({ onClick, value }) => (
-                                                <Button variant="outline" size="sm" type="button" onClick={onClick}>
-                                                    <Calendar className="size-4 mr-2" /> {value || "Select a date"}
-                                                </Button>
-                                            )}
-                                        />
+                    suffix={
+                        <Controller
+                            name="date"
+                            control={form.control}
+                            render={({ field: dateField }) => (
+                                <DatePicker
+                                    value={dateField.value}
+                                    onChange={dateField.onChange}
+                                    renderInput={({ onClick, value }) => (
+                                        <Button variant="outline" size="sm" type="button" onClick={onClick}>
+                                            <Calendar className="size-4 mr-2" /> {value || "Select a date"}
+                                        </Button>
                                     )}
                                 />
-                            }
+                            )}
                         />
-                    )}
+                    }
                 />
+
                 {errors.amount && <Field.Validation>{errors.amount.message}</Field.Validation>}
             </Field>
 
