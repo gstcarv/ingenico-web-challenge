@@ -38,7 +38,9 @@ export const CurrencySelect = ({ label, name, control, className, error }: Curre
                                 <div
                                     className="w-6 h-6 rounded-full bg-gray-100 bg-neutral-50"
                                     style={{
-                                        backgroundImage: `url(${getFlag(field.value as string)})`,
+                                        backgroundImage: field.value
+                                            ? `url(${getFlag(field.value as string)})`
+                                            : undefined,
                                         backgroundSize: "cover",
                                         backgroundPosition: "center",
                                     }}
