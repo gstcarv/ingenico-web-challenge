@@ -12,22 +12,28 @@
     "dependencies": {
         "@hookform/resolvers": "^5.2.1",
         "@ingenico-challenge/ui": "workspace:*",
+        "@tanstack/react-query": "^5.85.0",
+        "@tanstack/react-router": "^1.131.10",
+        "@tanstack/react-start": "^1.131.11",
+        "@tanstack/virtual-file-routes": "^1.131.2",
+        "lucide-react": "^0.539.0",
         "react": "^19.0.1",
         "react-dom": "^19.0.2",
         "react-hook-form": "^7.62.0",
-        "zod": "^4.0.17",
-        "lucide-react": "^0.539.0"
+        "vite-tsconfig-paths": "^5.1.4",
+        "zod": "^4.0.17"
     },
     "devDependencies": {
         "@ingenico-challenge/eslint-config": "workspace:*",
         "@ingenico-challenge/typescript-config": "workspace:*",
         "@tailwindcss/vite": "^4.1.11",
+        "@tanstack/react-query-devtools": "^5.85.0",
         "@types/react": "^19.0.1",
         "@types/react-dom": "^19.0.2",
         "@vitejs/plugin-react": "^3.1.0",
         "eslint": "^8.57.0",
         "tailwindcss": "^4.1.11",
         "typescript": "5.5.4",
-        "vite": "^5.1.4"
+        "vite": "^6.3.5"
     }
 }

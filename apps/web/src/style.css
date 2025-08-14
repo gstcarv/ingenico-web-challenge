@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "@ingenico-challenge/ui/main.css";
 
-@source '../../../node_modules/@ingenico-challenge';
+@source '../node_modules/@ingenico-challenge';
 
 /* Custom styles can be added below */
