@@ -41,10 +41,18 @@ export const useCurrencyForm = () => {
         form.setValue("toCurrency", fromCurrency);
     };
 
+    const handleRetry = useCallback(async () => {
+        const formData = form.getValues();
+        if (form.formState.isValid) {
+            return conversionMutation.mutateAsync(formData);
+        }
+    }, [form, conversionMutation]);
+
     return {
         form,
         onSubmit: form.handleSubmit(onSubmit),
         handleSwapCurrencies,
+        handleRetry,
         isSubmitting: form.formState.isSubmitting || conversionMutation.isPending,
         errors: form.formState.errors,
         conversionResult: conversionMutation.data,

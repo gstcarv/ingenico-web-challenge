@@ -2,11 +2,13 @@ import { Button, DatePicker, Field } from "@ingenico-challenge/ui";
 import { ArrowLeftRight, ArrowUpDown, Calendar } from "lucide-react";
 import { CurrencySelect } from "./currency-select";
 import { CurrencyAmountInput } from "./currency-amount-input";
+import { ConvertButton } from "./convert-button";
 import { useCurrencyForm } from "../../hooks/use-currency-form";
 import { Controller } from "react-hook-form";
 
 export const CurrencyConverterForm = () => {
-    const { form, onSubmit, handleSwapCurrencies, isSubmitting, errors } = useCurrencyForm();
+    const { form, onSubmit, handleSwapCurrencies, handleRetry, isSubmitting, errors, conversionError } =
+        useCurrencyForm();
 
     return (
         <form onSubmit={onSubmit} className="flex flex-col gap-6">
@@ -64,13 +66,12 @@ export const CurrencyConverterForm = () => {
             </Field>
 
             <div className="pt-2">
-                <Button
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                    type="submit"
-                    disabled={isSubmitting}
-                >
-                    {isSubmitting ? "Converting..." : "Convert"}
-                </Button>
+                <ConvertButton
+                    isSubmitting={isSubmitting}
+                    hasError={!!conversionError}
+                    onRetry={handleRetry}
+                    onSubmit={onSubmit}
+                />
             </div>
         </form>
     );
