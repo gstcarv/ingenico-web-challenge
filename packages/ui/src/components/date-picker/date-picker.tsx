@@ -101,7 +101,7 @@ export const DatePicker = ({
                 <InputBase
                     className={className}
                     prefix={prefix}
-                    suffix={suffix || <Calendar size={20} className="text-neutral-500" />}
+                    suffix={suffix || <Calendar size={20} className="text-neutral-500" aria-hidden="true" />}
                     onClick={handleInputClick}
                     onKeyDown={handleInputKeyDown}
                     tabIndex={0}

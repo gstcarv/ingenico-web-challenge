@@ -26,9 +26,10 @@ export const CurrencyConverterForm = () => {
                     className="w-10 h-10 rounded-full mt-5"
                     type="button"
                     onClick={handleSwapCurrencies}
+                    aria-label="Swap currencies"
                 >
-                    <ArrowLeftRight className="hidden lg:block" />
-                    <ArrowUpDown className="lg:hidden" />
+                    <ArrowLeftRight className="hidden lg:block" aria-hidden="true" />
+                    <ArrowUpDown className="lg:hidden" aria-hidden="true" />
                 </Button>
 
                 <CurrencySelect

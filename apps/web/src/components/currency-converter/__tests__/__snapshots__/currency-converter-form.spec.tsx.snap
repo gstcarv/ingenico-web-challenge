@@ -1,0 +1,110 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CurrencyConverterForm > should match snapshot 1`] = `
+<form
+  class="flex flex-col gap-6"
+>
+  <div
+    class="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-6"
+  >
+    <div
+      data-testid="currency-select-fromCurrency"
+    >
+      From
+       Currency Select (
+      fromCurrency
+      )
+    </div>
+    <button
+      aria-label="Swap currencies"
+      class="inline-flex items-center justify-center font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer border border-neutral-200 bg-white text-neutral-900 hover:bg-neutral-50 focus-visible:ring-neutral-500 px-3 text-sm w-10 h-10 rounded-full mt-5"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-arrow-left-right hidden lg:block"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M8 3 4 7l4 4"
+        />
+        <path
+          d="M4 7h16"
+        />
+        <path
+          d="m16 21 4-4-4-4"
+        />
+        <path
+          d="M20 17H4"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-arrow-up-down lg:hidden"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m21 16-4 4-4-4"
+        />
+        <path
+          d="M17 20V4"
+        />
+        <path
+          d="m3 8 4-4 4 4"
+        />
+        <path
+          d="M7 4v16"
+        />
+      </svg>
+    </button>
+    <div
+      data-testid="currency-select-toCurrency"
+    >
+      To
+       Currency Select (
+      toCurrency
+      )
+    </div>
+  </div>
+  <div
+    class="field flex flex-col gap-2"
+  >
+    <label
+      class="text-xs text-neutral-500 uppercase tracking-wide font-medium"
+      for="amount"
+    >
+      Value
+    </label>
+    <div
+      data-testid="currency-amount-input"
+    >
+      Currency Amount Input
+    </div>
+  </div>
+  <div
+    class="pt-2"
+  >
+    <div
+      data-testid="convert-button"
+    >
+      Convert Button
+    </div>
+  </div>
+</form>
+`;

@@ -21,6 +21,7 @@ export const Select = ({ className, suffix, prefix, ...props }: SelectProps) => 
         <ChevronDown
             className="select__input-icon absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-neutral-500"
             size={20}
+            aria-hidden="true"
         />
     </InputBase>
 );
