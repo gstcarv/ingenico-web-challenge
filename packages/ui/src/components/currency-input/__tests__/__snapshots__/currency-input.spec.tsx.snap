@@ -10,7 +10,7 @@ exports[`CurrencyInput > applies custom className 1`] = `
     $
   </div>
   <input
-    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-base px-4 pl-12"
+    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-lg px-4 pl-12"
     data-testid="currency-input"
     inputmode="decimal"
     placeholder="0.00"
@@ -30,7 +30,7 @@ exports[`CurrencyInput > handles different size variants 1`] = `
     $
   </div>
   <input
-    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-base px-4 pl-12"
+    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-lg px-4 pl-12"
     data-testid="currency-input"
     inputmode="decimal"
     placeholder="0.00"

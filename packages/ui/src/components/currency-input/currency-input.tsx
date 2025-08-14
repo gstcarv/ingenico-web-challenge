@@ -9,8 +9,8 @@ const currencyInputVariants = cva(
         variants: {
             size: {
                 sm: "text-sm px-3",
-                md: "text-base px-4",
-                lg: "text-lg px-6",
+                md: "text-lg px-4",
+                lg: "text-2xl px-6",
             },
         },
         defaultVariants: {

@@ -10,9 +10,13 @@
         "lint": "eslint \"src/**/*.ts\""
     },
     "dependencies": {
+        "@hookform/resolvers": "^5.2.1",
         "@ingenico-challenge/ui": "workspace:*",
         "react": "^19.0.1",
-        "react-dom": "^19.0.2"
+        "react-dom": "^19.0.2",
+        "react-hook-form": "^7.62.0",
+        "zod": "^4.0.17",
+        "lucide-react": "^0.539.0"
     },
     "devDependencies": {
         "@ingenico-challenge/eslint-config": "workspace:*",
