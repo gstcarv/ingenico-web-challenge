@@ -19,6 +19,7 @@
         "@tanstack/react-start": "^1.131.11",
         "@tanstack/virtual-file-routes": "^1.131.2",
         "@types/node": "^24.2.1",
+        "dayjs": "^1.11.13",
         "lucide-react": "^0.539.0",
         "react": "^19.0.1",
         "react-dom": "^19.0.2",

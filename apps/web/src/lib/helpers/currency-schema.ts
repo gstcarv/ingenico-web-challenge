@@ -8,3 +8,4 @@ export const currencyFormSchema = z.object({
 });
 
 export type CurrencyFormData = z.infer<typeof currencyFormSchema>;
+export type HistoricalConversionParams = z.infer<typeof currencyFormSchema>;

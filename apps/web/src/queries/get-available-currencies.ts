@@ -1,5 +1,5 @@
 import { UseQueryOptions } from "@tanstack/react-query";
-import { getApiUrl } from "../lib/api";
+import { getApiUrl, fetchCurrency } from "../lib/api";
 import { GetCurrenciesResponse } from "../types/currency";
 import mocks from "../mocks/currencies.json";
 
@@ -14,7 +14,6 @@ export const getAvailableCurrenciesQuery = (): UseQueryOptions<GetCurrenciesResp
             return mocks as GetCurrenciesResponse;
         }
 
-        const response = await fetch(getApiUrl("/v3/currencies"));
-        return response.json();
+        return fetchCurrency<GetCurrenciesResponse>(getApiUrl("/v3/currencies"));
     },
 });

@@ -14,3 +14,16 @@ export interface Currency {
 export interface GetCurrenciesResponse {
     data: Record<string, Currency>;
 }
+
+// Interfaces para conversão histórica
+export interface HistoricalConversionRate {
+    code: string;
+    value: number;
+}
+
+export interface HistoricalConversionResponse {
+    data: Record<string, HistoricalConversionRate>;
+    meta: {
+        last_updated_at: string;
+    };
+}

@@ -47,6 +47,9 @@ importers:
       '@types/node':
         specifier: ^24.2.1
         version: 24.2.1
+      dayjs:
+        specifier: ^1.11.13
+        version: 1.11.13
       lucide-react:
         specifier: ^0.539.0
         version: 0.539.0(react@19.1.1)
