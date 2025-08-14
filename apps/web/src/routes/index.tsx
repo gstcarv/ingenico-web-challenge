@@ -11,6 +11,7 @@ export const Route = createFileRoute("/")({
     },
     staleTime: FIVE_HOURS,
     gcTime: FIVE_HOURS,
+    ssr: true,
 });
 
 function RouteComponent() {
