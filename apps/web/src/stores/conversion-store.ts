@@ -1,5 +1,5 @@
-import { create } from 'zustand'
-import type { ProcessedConversionResponse } from '../types/currency'
+import { create } from "zustand";
+import type { ProcessedConversionResponse } from "../types/currency";
 
 type ConversionCache = {
     [key: string]: {

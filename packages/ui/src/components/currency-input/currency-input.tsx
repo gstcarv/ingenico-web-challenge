@@ -42,16 +42,16 @@ export type CurrencyInputProps = Omit<
         suffix?: ReactNode;
     };
 
-export const CurrencyInput = ({ 
-    className, 
-    size, 
-    value, 
-    onChange, 
-    placeholder = "0.00", 
-    prefix, 
-    suffix, 
+export const CurrencyInput = ({
+    className,
+    size,
+    value,
+    onChange,
+    placeholder = "0.00",
+    prefix,
+    suffix,
     ref,
-    ...props 
+    ...props
 }: CurrencyInputProps) => {
     const handleValueChange = (values: { floatValue: number | undefined; value: string }) => {
         onChange?.(values.floatValue);
