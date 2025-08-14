@@ -3,6 +3,7 @@ import { CurrencyConverter } from "../components/currency-converter/currency-con
 import { getAvailableCurrenciesQuery } from "../queries/get-available-currencies";
 
 const STALE_TIME = 1000 * 60 * 60 * 24; // 24 hours
+const STALE_TIME_SECONDS = STALE_TIME / 1000;
 
 export const Route = createFileRoute("/")({
     component: RouteComponent,
@@ -12,6 +13,11 @@ export const Route = createFileRoute("/")({
     staleTime: STALE_TIME,
     gcTime: STALE_TIME,
     ssr: true,
+    headers: async () => ({
+        "Cache-Control": `public, s-maxage=${STALE_TIME_SECONDS}`,
+        "CDN-Cache-Control": `public, s-maxage=${STALE_TIME_SECONDS}`,
+        "Vercel-CDN-Cache-Control": `public, s-maxage=${STALE_TIME_SECONDS}`,
+    }),
 });
 
 function RouteComponent() {
