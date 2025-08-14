@@ -2,6 +2,10 @@
 
 A modern currency conversion application built with React, TypeScript, and Vite. This monorepo contains a web application and a reusable UI component library.
 
+## 🌐 Live Demo
+
+**Deployed Application:** [https://ingenico-web-challenge-web.vercel.app/](https://ingenico-web-challenge-web.vercel.app/)
+
 ## 🚀 Quick Start
 
 ### Prerequisites

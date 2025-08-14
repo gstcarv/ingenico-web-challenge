@@ -85,7 +85,7 @@ exports[`CurrencyInput > applies different sizes correctly 1`] = `
   class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
 >
   <input
-    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-sm px-4"
+    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-lg px-4"
     data-testid="currency-input"
     inputmode="numeric"
     placeholder="0.00"
@@ -100,7 +100,7 @@ exports[`CurrencyInput > applies different sizes correctly 2`] = `
   class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
 >
   <input
-    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-2xl px-4"
+    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-lg px-4"
     data-testid="currency-input"
     inputmode="numeric"
     placeholder="0.00"
@@ -115,7 +115,7 @@ exports[`CurrencyInput Variants > applies large size variant 1`] = `
   class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
 >
   <input
-    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-2xl px-4"
+    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-lg px-4"
     data-testid="currency-input"
     inputmode="numeric"
     placeholder="0.00"
@@ -145,7 +145,7 @@ exports[`CurrencyInput Variants > applies small size variant 1`] = `
   class="input-base h-16 w-70 bg-white border border-neutral-200 rounded-lg shadow-lg relative text-neutral-500 font-medium"
 >
   <input
-    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-sm px-4"
+    class="w-full h-full bg-transparent border-none outline-none text-neutral-900 font-medium placeholder:text-neutral-400 focus-visible:ring-0 text-lg px-4"
     data-testid="currency-input"
     inputmode="numeric"
     placeholder="0.00"

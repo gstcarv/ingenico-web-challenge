@@ -149,18 +149,20 @@ describe("DatePicker", () => {
     });
 
     it("displays selected date in correct format", () => {
-        const testDate = new Date("2024-01-15T00:00:00.000Z");
+        // Use a date that's clearly January 15th regardless of timezone
+        const testDate = new Date(2024, 0, 15, 12, 0, 0); // January 15, 2024 at 12:00 PM
         render(<DatePicker value={testDate} data-testid="date-picker" />);
 
-        const input = screen.getByDisplayValue("14/01/2024");
+        const input = screen.getByDisplayValue("15/01/2024");
         expect(input).toBeInTheDocument();
     });
 
     it("displays selected date in custom format", () => {
-        const testDate = new Date("2024-01-15T00:00:00.000Z");
+        // Use a date that's clearly January 15th regardless of timezone
+        const testDate = new Date(2024, 0, 15, 12, 0, 0); // January 15, 2024 at 12:00 PM
         render(<DatePicker value={testDate} format="DD/MM/YYYY" data-testid="date-picker" />);
 
-        const input = screen.getByDisplayValue("14/01/2024");
+        const input = screen.getByDisplayValue("15/01/2024");
         expect(input).toBeInTheDocument();
     });
 
