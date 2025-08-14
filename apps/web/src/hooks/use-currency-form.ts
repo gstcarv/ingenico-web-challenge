@@ -46,6 +46,8 @@ export const useCurrencyForm = () => {
         if (form.formState.isValid) {
             return conversionMutation.mutateAsync(formData);
         }
+
+        return;
     }, [form, conversionMutation]);
 
     return {
