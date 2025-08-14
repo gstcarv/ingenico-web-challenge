@@ -9,6 +9,9 @@ export default defineConfig({
         setupFiles: ["./src/test/setup.ts"],
         globals: true,
         coverage: {
+            provider: "v8",
+            reporter: ["text", "json", "html"],
+            include: ["src/**/*"],
             exclude: [
                 "storybook-static/**",
                 "**/*.stories.*",
@@ -16,6 +19,10 @@ export default defineConfig({
                 ".vercel/**",
                 ".tanstack/**",
                 ".nitro/**",
+                "src/test/**",
+                "src/**/*.d.ts",
+                "src/**/*.config.*",
+                "src/**/*.setup.*",
             ],
         },
     },
